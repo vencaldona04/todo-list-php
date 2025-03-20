@@ -1,0 +1,153 @@
+/* styles.css - External css style */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+.sidebar {
+    background-color: #003399;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.task-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.add-task-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-list li:last-child {
+    border-bottom: none;
+}
+
+.completed-tasks {
+    margin-top: 20px;
+}
+
+.completed-tasks li {
+    background-color: #f0f0f0;
+}
+
+.complete-btn, .delete-btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.complete-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+
+
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; /* White background */
+    padding: 30px; /* Increased padding */
+    border-radius: 12px; /* Smoother corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+    z-index: 1000;
+    width: 400px; /* Set a fixed width */
+    max-width: 90%; /* Responsive width */
+}
+
+.popup h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Darker text */
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup input[type="text"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.popup input[type="text"]:focus {
+    border-color: #007bff; /* Highlight on focus */
+    outline: none;
+}
+
+.popup button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
